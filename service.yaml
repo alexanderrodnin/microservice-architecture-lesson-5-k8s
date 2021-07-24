@@ -7,6 +7,6 @@ spec:
     app: arch-hw-5-app
   ports:
     - protocol: TCP
-      port: 9000
+      port: 8000
       targetPort: web
   type: NodePort
