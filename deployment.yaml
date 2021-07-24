@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: otus-lesson-5-deployment
+  name: arch-hw-5-deployment
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: otus-lesson-5
+      app: arch-hw-5-app
   template:
     metadata:
       labels:
-        app: otus-lesson-5
+        app: arch-hw-5-app
     spec:
       containers:
-      - name: otus-lesson-5
-        image: alexanderrodnin/otus-lesson-5:0.0.1
-        ports:
-        - containerPort: 8000
+        - name: hello-py
+          image: alexanderrodnin/hello-py:v1
+          ports:
+            - name: web
+              containerPort: 80
